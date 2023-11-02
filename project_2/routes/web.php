@@ -61,5 +61,9 @@ Route::get('show', [\App\Http\Controllers\ShowController::class, 'show']);
 Route::get('show_data', [ShowController::class, 'showData']);
 
     //Kontroler userForm
-Route::view('userform', 'forms.user_form');
-Route::get('UserFormController', [\App\Http\Controllers\UserFormController::class,'showForm']);
+Route::view('userform', 'forms.user_form')->name('forms.user');
+Route::post('UserFormController', [\App\Http\Controllers\UserFormController::class,'showForm']);
+
+
+Route::get('/usersdbtable', [\App\Http\Controllers\UsersController::class,'show'])->name('users.show');
+Route::post('CreateUser', [\App\Http\Controllers\UsersController::class,'store'])->name('forms.create');

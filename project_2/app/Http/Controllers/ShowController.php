@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Spatie\FlareClient\View;
 
+use App\Models\User;
+
 class ShowController extends Controller
 {
     public function show(){

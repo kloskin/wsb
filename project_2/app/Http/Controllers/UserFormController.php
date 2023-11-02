@@ -11,9 +11,9 @@ class UserFormController extends Controller
   {
 //    Nie dodawać w formularzu bo mozna zbadac i wyslac
     $req->validate([
-      'firstName' => 'required | min:3 | max:15',
-      'lastName' => 'required',
+      'name' => 'required | min:3 | max:15',
       'email' => 'required | min:5 | max:50 | email',
+      'password' => 'required | min:3'
     ]);
     return View('showUser', $req->input());
 //    return View('showUser', $req);

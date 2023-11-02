@@ -9,9 +9,8 @@
 </head>
 <body>
   <h3>Dane uzytkownika</h3>
-  Imię i nazwisko: {{$firstName}} {{$lastName}}
+  Imię i nazwisko: {{$name}} {{$email}}
   <hr>
-  {{print_r($_GET)}}
 
 </body>
 </html>
